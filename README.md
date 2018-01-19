@@ -1,2 +1,0 @@
-# jdeurt.github.io
-stuff
