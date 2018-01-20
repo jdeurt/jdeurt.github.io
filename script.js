@@ -14,6 +14,7 @@ window.onload = function() {
         else return;
         
         output.text = input.text.replace(char_starting, char_starting+"**newline****tab**").replace(new RegExp(char_ending+"$"), "**newline**"+char_ending);
+        output.text = output.text.replace()
         
         output.text = output.text.replace(/**newline**/g, "\n").replace(/**tab**/g, "\t");
         
