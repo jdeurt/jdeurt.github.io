@@ -17,7 +17,6 @@ window.onload = function() {
         output.text = output.text.replace()
         
         output.element.value = output.text;
-        console.log(output.text;)
     }
 
 }
