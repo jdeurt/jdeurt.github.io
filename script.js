@@ -16,6 +16,8 @@ window.onload = function() {
         
         output.text = input.text.replace(char_starting, char_starting+"\n\t").replace(new RegExp(char_ending+"$"), "\n"+char_ending);
         
+        if(invalid) return;
+        
         output.element.value = output.text;
     }
 
