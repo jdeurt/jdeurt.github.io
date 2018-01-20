@@ -13,9 +13,12 @@ window.onload = function() {
             char_ending = "]";
         else return;
         
-        output.text = input.text.replace(char_starting, char_starting+"\n\t").replace(new RegExp(char_ending+"$"), "\n"+char_ending);
+        output.text = input.text.replace(char_starting, char_starting+"**newline****tab**").replace(new RegExp(char_ending+"$"), "**newline**"+char_ending);
+        
+        output.text = output.text.replace(/**newline**/g, "\n").replace(/**tab**/g, "\t");
         
         output.element.value = output.text;
+        console.log(output.text;)
     }
 
 }
