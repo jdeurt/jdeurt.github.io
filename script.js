@@ -15,11 +15,12 @@ window.onload = function() {
         
         var tabAmount = 0;
         while(input.text.search(/^{|^\[/g) >= 0) {
-            var done;
+            var found = false;
             input.text.match(/{(.*?\n*?.*?)}|\[(.*?\n*?.*?)\]/g).forEach(v => {
                 input.text.replace(v, "");
+                if(!found) found = true;
             });
-            if(done.length)
+            if(found)
                 tabAmount++;
             console.log(tabAmount);
         }
