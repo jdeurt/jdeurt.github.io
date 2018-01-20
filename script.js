@@ -1,7 +1,6 @@
 window.onload = function() {
 
     document.getElementById("formatter").onclick = function() {
-        var invalid = false;
         var input = {}, output = {};
         input.element = document.getElementById("input");
         input.text = input.element.value;
@@ -12,11 +11,9 @@ window.onload = function() {
             char_ending = "}";
         else if(char_starting === "[")
             char_ending = "]";
-        else invalid = true;
+        else return;
         
         output.text = input.text.replace(char_starting, char_starting+"\n\t").replace(new RegExp(char_ending+"$"), "\n"+char_ending);
-        
-        if(invalid) return;
         
         output.element.value = output.text;
     }
