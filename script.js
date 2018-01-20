@@ -14,7 +14,7 @@ window.onload = function() {
         else return;
         
         var tabAmount = 0;
-        while(input.text.includes(/^{|^\[/g)) {
+        while(input.text.match(/^{|^\[/g)) {
             var done;
             input.text.match(/{(.*?\n*?.*?)}|\[(.*?\n*?.*?)\]/g).forEach(v => {
                 input.text.replace(v, "");
